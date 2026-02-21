@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - Aaditya-Web-App
+name: Build and deploy Node.js app to Azure Web App - aaditya-web-app
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: '20.x'
 
       - name: npm install, build, and test
         run: |
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F75CBD1D79B8441095D25EEB2F0B2327 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_2D9D4B6A59E34149871C7232F17ED99D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_324DB1048BDB4B068D11B210CBBE3ACC }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_59DC386EBDC2401E96A9A3B7E41B8BC7 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_55BE10FF701746798C7CE1CE1445FEBF }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_47736AEF91B24BEAB815F644FA4F6B83 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Aaditya-Web-App'
+          app-name: 'aaditya-web-app'
           slot-name: 'Production'
           package: .
           
