@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: read #This is required for actions/checkout
 
@@ -28,7 +28,7 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-      
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
@@ -51,13 +51,13 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_786FFC9B9F344178BCDDA4F53EF1C6BE }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A7E215D572CB4EAE99D91BC5F9EF838A }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C668A02B616445E68E6A424CC7B05232 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2175BEB95A5A4699823473B19BEF74B4 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0C8A624DC9DC450DBEA6BA8AE3EAE47B }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E6AC71640FA8479EA28D2361F8AE7EA9 }}
 
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
         with:
           app-name: 'Aaditya-Web-App'
           slot-name: 'Production'
