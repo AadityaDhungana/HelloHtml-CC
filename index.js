@@ -7,47 +7,64 @@ app.get('/', (req, res) => {
     <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <title>Aaditya Web App</title>
+      <title>Ishan's Azure Web App</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>
         body {
           margin: 0;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background: linear-gradient(135deg, #4e73df, #1cc88a);
+          font-family: 'Arial', sans-serif;
+          background: linear-gradient(120deg, #1f1c2c, #928dab);
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100vh;
-          color: white;
+          color: #fff;
         }
         .card {
-          background: rgba(255, 255, 255, 0.15);
-          padding: 40px;
-          border-radius: 15px;
-          backdrop-filter: blur(10px);
-          box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+          background: rgba(0,0,0,0.6);
+          padding: 50px;
+          border-radius: 20px;
+          backdrop-filter: blur(15px);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
           text-align: center;
-          width: 350px;
+          width: 400px;
+          transition: transform 0.3s ease;
         }
-        h1 { margin-bottom: 10px; font-size: 28px; }
-        p { margin-bottom: 20px; font-size: 16px; }
+        .card:hover { transform: translateY(-10px); }
+        h1 {
+          margin-bottom: 15px;
+          font-size: 30px;
+          color: #f9d423;
+        }
+        p {
+          margin-bottom: 25px;
+          font-size: 18px;
+          color: #ffffffcc;
+        }
         .btn {
-          background: white;
-          color: #4e73df;
-          padding: 10px 20px;
-          border-radius: 25px;
+          display: inline-block;
+          background: #f9d423;
+          color: #1f1c2c;
+          padding: 12px 28px;
+          border-radius: 30px;
           text-decoration: none;
           font-weight: bold;
-          transition: 0.3s;
+          font-size: 16px;
+          box-shadow: 0 4px 15px rgba(249, 212, 35, 0.4);
+          transition: all 0.3s ease;
         }
-        .btn:hover { background: #f8f9fc; transform: scale(1.05); }
+        .btn:hover {
+          background: #ffd64d;
+          transform: scale(1.1);
+          box-shadow: 0 6px 20px rgba(249, 212, 35, 0.6);
+        }
       </style>
     </head>
     <body>
       <div class="card">
-        <h1>Hello Aaditya Dhungana 🚀</h1>
-        <p>Welcome to this Azure App!</p>
-        <a href="#" class="btn">Learn More</a>
+        <h1>Welcome Ishan Shrestha 🚀</h1>
+        <p>to your Azure Web App! Enjoy building cloud applications.</p>
+        <a href="#" class="btn">Get Started</a>
       </div>
     </body>
     </html>
